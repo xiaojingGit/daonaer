@@ -25,17 +25,17 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .mp-header{
+	display: flex;
 	height: .88rem;
 	background:#00bcd4;
-	display: flex;
 }
 .mp-header-left{
-	font-size: .36rem;
 	display: inline-block;
-	color: #fff;
-	line-height: .88rem;
 	padding:0 .2rem;
 	width:.4rem;
+	font-size: .36rem;
+	color: #fff;
+	line-height: .88rem;
 }
 .mp-header-title{
 	flex:1;
@@ -69,10 +69,10 @@
 	width: 0;
 	height: 0;
 	border-left: .13rem solid transparent;
-  border-right: .13rem solid transparent;
-  border-top: .13rem solid #fff;
-  margin-left:.04rem;
-  display: inline-block;
-  line-height: .88rem;
+	border-right: .13rem solid transparent;
+	border-top: .13rem solid #fff;
+	margin-left:.04rem;
+	display: inline-block;
+	line-height: .88rem;
 }
 </style>
