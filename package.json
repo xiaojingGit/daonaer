@@ -1,8 +1,8 @@
 {
-  "name": "vueproject",
+  "name": "daole",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "xiaojingGit <1941180150@qq.com>",
+  "author": "voggen",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -10,7 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
     "vue": "^2.5.2",
+    "vue-awesome-swiper": "^2.6.7",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
