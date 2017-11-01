@@ -18,7 +18,7 @@
 </template>
 <script>
 	export default {
-	 
+
 	}
 </script>
 
@@ -69,10 +69,10 @@
 	width: 0;
 	height: 0;
 	border-left: .13rem solid transparent;
-    border-right: .13rem solid transparent;
-    border-top: .13rem solid #fff;
-    margin-left:.04rem;
-    display: inline-block;
-    line-height: .88rem;
+  border-right: .13rem solid transparent;
+  border-top: .13rem solid #fff;
+  margin-left:.04rem;
+  display: inline-block;
+  line-height: .88rem;
 }
 </style>
