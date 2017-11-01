@@ -46,8 +46,8 @@
 	border-radius: .06rem;
 }
 .mp-linkarea{
-	color:#e4e7ea;
 	display: inline-block;
+	color:#e4e7ea;
 }
 .mp-icon-search{
 	margin-left:.2rem;
