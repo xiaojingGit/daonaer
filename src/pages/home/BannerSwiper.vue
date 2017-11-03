@@ -64,9 +64,9 @@
 		height: .2rem;
 		margin: 0 .08rem;
 		border-radius: .1rem;
-		background: #fff;	
+		background: rgba(255, 255, 255, 0.5);	
 	}
 	.home-bullet-active{
-		opacity: .5;
+		background: #fff;
 	}
 </style>
