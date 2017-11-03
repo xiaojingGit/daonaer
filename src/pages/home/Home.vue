@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <index-header />
+  	<div>
+    	<index-header />
+    	<index-banner-swiper />
     </div>
-  </div>
 </template>
 <script>
 import header from "./Header.vue"; //局部组件
+import swiper from './BannerSwiper.vue';
 export default {
   components:{
-      "index-header": header
+      "index-header": header,
+      "index-banner-swiper": swiper
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>
