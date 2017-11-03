@@ -29,9 +29,10 @@
 <style>
     .activity-list {
         display: flex;
-        width: 100%;
-        border-top: 1px solid #f1f1f1;
         overflow: hidden;
+        border-top: 1px solid #f1f1f1;
+        width: 100%;
+        background: #ffffff;
     }
     .activity-item {
         overflow: hidden;
@@ -57,6 +58,7 @@
         overflow: hidden;
         margin-top: .2rem;
         width: 100%;
+        background: #ffffff;
     }
     .activity-img-item {
         width: 50%;
@@ -67,5 +69,6 @@
     }
     .activity-item-img {
         width: 100%;
+        height: 100%;
     }
 </style>
