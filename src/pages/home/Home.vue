@@ -15,7 +15,7 @@ export default {
   components:{
       "index-header": header,
       "index-banner-swiper": swiper,
-      "hot-sell-list": hotSellList
+      "hot-sell-list": hotSellList,
       "index-weeklytrip":weeklyTrip
   }
 }
