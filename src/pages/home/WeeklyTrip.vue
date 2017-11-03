@@ -29,9 +29,21 @@
 				},{
 					id:2,
 					link:"/",
-					img:"http://img1.qunarzz.com/sight/source/1505/44/5251f239d3456.jpg_r_640x214_88ab6a42.jpg",
-					infoName:"乐山必游TOP10",
-					infoDesc:"坐竹排看大佛，还有这么多好玩的地方"
+					img:"http://img1.qunarzz.com/sight/source/1505/63/0ffcb5c329a19c.jpg_r_640x214_93fd1e5a.jpg",
+					infoName:"慢游成都最美古镇",
+					infoDesc:"撷取一份悠闲，寻觅散落在时光里的幸福"
+				},{
+					id:3,
+					link:"/",
+					img:"http://img1.qunarzz.com/sight/source/1505/a2/78e4dbcfd45a6d.jpg_r_640x214_7a62b06a.jpg",
+					infoName:"成都必游TOP10",
+					infoDesc:"成都的标志，也是现代人对老成都的记忆"
+				},{
+					id:4,
+					link:"/",
+					img:"http://img1.qunarzz.com/sight/source/1606/66/6d3cd39ae06500.jpg_r_640x214_f7c64cd2.jpg",
+					infoName:"绵阳必游TOP5",
+					infoDesc:"伟大浪漫主义诗人李白的故乡"
 				}]
 			}
       	}
