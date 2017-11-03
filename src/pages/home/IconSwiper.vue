@@ -137,7 +137,8 @@
 
 <style>
     .icon-swiper{
-         height:3.8rem;
+        height:3.8rem;
+        background-color: #fff;
     }
 
 	.icon-pag {
@@ -145,7 +146,6 @@
         position: relative;
         overflow: hidden;
         padding: .1rem 0;
-        background-color: #fff;
         overflow: hidden; 
         width: 100%;
         z-index: 2;
