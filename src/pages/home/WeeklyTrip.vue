@@ -4,7 +4,7 @@
   		<div class="home-weeklyTrip-list">
   			<div class="home-weeklyTrip-item" v-for="item in weeklyTripList" :key="item.link">
   				<a class="home-weeklyTrip-itemLink" :href="item.link">
-  					<div class="home-weeklyTrip-itemImg"">
+  					<div class="home-weeklyTrip-itemImg">
   						<img :src="item.img" alt="乐山必游TOP10"/>
   					</div>
   					<div class="home-weeklyTrip-info">
