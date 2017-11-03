@@ -69,8 +69,12 @@
 
 <style scoped>
     .modtitle{
+        width: 3rem;
         height: .8rem;
         padding-left: .26rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         line-height: .8rem;
         color: #212121;
     }
