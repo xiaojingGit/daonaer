@@ -6,7 +6,7 @@
 		  		<i class="mp-icon-search iconfont icon-sousuo"></i>
 		  		<span class="mp-single-line">输入城市/景点/游玩主题</span>
 		  	</router-link>
-  		</div>2
+  		</div>
   		<div class="mp-header-right" >
   			<a href="/touch/toNewCityList.htm" title="城市选择" class="mp-linkarea">
 	  			<span class="mp-nav-city">
