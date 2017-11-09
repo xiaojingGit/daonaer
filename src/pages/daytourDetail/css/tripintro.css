@@ -1,0 +1,141 @@
+.inline-block {
+    display: inline-block;
+}
+.routesum {
+    background-color: #fff;
+    padding: 0 .2rem;
+}
+.routesum-outter {
+    padding: .24rem 0;
+}
+.routesum-inner {
+    background-color: #f5f5f5;
+    border-radius: .1rem;
+    padding: .2rem;
+}
+.routesum-item {
+    position: relative;
+    zoom: 1;
+    overflow: hidden;
+    margin-bottom: .2rem;
+}
+.routesum-item:last-child {
+    margin-bottom: 0;
+}
+.routesum-item .iconfont {
+    margin-right: .1rem;
+    color: #919191;
+    font-size: .28rem!important;
+}
+.routesum-item .routesum-title {
+    overflow: hidden;
+    max-width: 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #212121;
+}
+.routesum-item .routesum-content {
+    overflow: hidden;
+    max-width: 5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: .1rem;
+    color: #616161;
+}
+.trip-arrange {
+    border-bottom: 1px dashed #dadada;
+}
+.trip-title {
+    margin-bottom: .1rem;
+    color: #616161;
+    font-size: .4rem;
+}
+.feature-list {
+    padding: .24rem 0 .3rem 0;
+    border-bottom: 1px dashed #dadada;
+}
+.feature-item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .44rem;
+    max-height: 1.32rem;
+}
+.arrange-title {
+    margin: .3rem 0 0 0;
+}
+.arrange-detail {
+    overflow: hidden;
+    padding: .2rem 0;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .4rem;
+}
+.arrange-item {
+    overflow: hidden;
+    min-height: 1%;
+}
+.arrange-item:not(:last-child) {
+    padding-bottom: .14rem;
+}
+.arrange-date {
+    overflow: hidden;
+    float: left;
+    width: .72rem;
+    height: .44rem;
+    white-space: nowrap;
+    color: #212121;
+}
+.arrange-route {
+    position: relative;
+    margin-left: .76rem;
+    padding-left: .7rem;
+    font-size: .28rem;
+    padding-bottom: .1rem;
+}
+.arrange-route:after{
+    content: '';
+    position: absolute;
+    bottom: -.4rem;
+    left: .04rem;
+    width: 1px;
+    height: 100%;
+    margin-left: .3rem;
+    border-radius: 3px;
+    background-color: rgba(217,217,217,0.7);
+}
+.arrange-route .iconfont {
+    position: absolute;
+    top: 2px;
+    left: .2rem;
+    color: #00afc7;
+    font-size: .28rem;
+    z-index: 2;
+}
+.route-point {
+    color: #00afc7;
+}
+.route-desc {
+    color: #616161;
+    font-size: .28rem;
+}
+.link-morepro-intro {
+    display: block;
+    height: .8rem;
+    margin-top: .1rem;
+    padding: 0 .2rem;
+    border-bottom: 1px solid #eee;
+    color: #616161;
+    font-size: .28rem;
+    line-height: .8rem;
+    text-align: center;
+}
+.trip-map {
+    height: 3.5rem;
+    padding: .2rem 0 .1rem 0;
+    overflow: hidden;
+    margin-bottom: .2rem;
+    position: relative;
+}
