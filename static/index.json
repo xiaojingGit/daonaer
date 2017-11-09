@@ -1,0 +1,198 @@
+{
+	"ret": true,
+	"data": {
+  		"swiperInfo": [{
+          "id": 1,
+          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/16/1d7693c6bd8abd02.png_640x200_43c308dd.png",
+          "link": "./list"
+        },{
+          "id": 2,
+          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/f5/57137c621d75ba02.jpg_640x200_b984ddf7.jpg",
+          "link": "./list"
+        },{
+          "id": 3,
+          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/b3/66f7230d9ad6e002.jpg_640x200_077e61ee.jpg",
+          "link": "./list"
+  		}],
+      "iconInfo": [{
+          "linkTo": "./list",
+          "id":1,
+          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+          "title": "景点门票"
+      },{
+        "linkTo": "./list",
+        "id":2,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+        "title": "动植物园"
+      },{
+        "linkTo": "./list",
+        "id":3,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png",
+        "title": "故宫"
+      },{
+        "linkTo": "./list",
+        "id":4,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+        "title": "一日游"
+      },{
+        "linkTo": "./list",
+        "id":5,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+        "title": "必游榜单"
+      },{
+        "linkTo": "./list",
+        "id":6,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/6d/ee9eb965690ce402.png",
+        "title": "秋色美"
+      },{
+        "linkTo": "./list",
+        "id":7,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+        "title": "游乐场"
+      },{
+        "linkTo": "./list",
+        "id":8,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+        "title": "泡温泉"
+      },{
+        "linkTo": "./list",
+        "id":9,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
+        "title": "城市观光"
+      },{
+        "linkTo": "./list",
+        "id":10,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/29/c16cd064d85d8502.png",
+        "title": "玻璃栈道"
+      },{
+        "linkTo": "./list",
+        "id":11,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/1c/a8a8d9023a814c02.png",
+        "title": "名胜古迹"
+      },{
+        "linkTo": "./list",
+        "id":12,
+        "imgUrl": "https://img1.qunarzz.com/piao/fusion/1602/f2/71eb19f77e3f21f7.png",
+        "title": "周边游"
+      },{
+        "linkTo": "./list",
+        "id":13,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
+        "title": "自然风光"
+      },{
+        "linkTo": "./list",
+        "id":14,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/ea/8cb1dce519375d02.png",
+        "title": "北水古镇"
+      },{
+        "linkTo": "./list",
+        "id":15,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1707/34/9285073fde1eb702.png",
+        "title": "景点讲解"
+      },{
+        "linkTo": "./list",
+        "id":16,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+        "title": "全部"
+      },{
+        "linkTo": "./list",
+        "id":17,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+        "title": "全部"
+      }],
+      "activityData": [{
+        "linkTo": "./list",
+        "id":1,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a2/e395615b16fb1302.png"
+      },{
+        "linkTo": "./list",
+        "id":2,
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/54/1685d2108b652302.png"
+      }],
+      "hotList": [{
+          "id": 1,
+          "src": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
+          "title": "故宫",
+          "desc": "东方宫殿建筑代表，世界宫殿建筑典范",
+          "price": 40,
+          "link": "/hotDetail"
+      }, {
+          "id": 2,
+          "src": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_140x140_97813766.jpg",
+          "title": "八达岭长城",
+          "desc": "不到长城非好汉",
+          "price": 25,
+          "link": ""
+      }, {
+          "id": 3,
+          "src": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_140x140_e20be8e0.jpg",
+          "title": "颐和园",
+          "desc": "保存完整的一座皇家行宫御苑",
+          "price": 1,
+          "link": ""
+      }, {
+          "id": 4,
+          "src": "http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_140x140_b05eb1df.jpg",
+          "title": "北京欢乐谷",
+          "desc": "七大主题园区带你畅享北京欢乐谷",
+          "price": 11,
+          "link": ""
+      }, {
+          "id": 5,
+          "src": "http://img1.qunarzz.com/sight/p0/1708/2b/2b6378fd3b2e1d86a3.img.jpg_140x140_eae81520.jpg",
+          "title": "慕田峪长城",
+          "desc": "秀美长城，关键是人少",
+          "price": 19.1,
+          "link": ""
+      }],
+      "weeklyTripList":[{
+          "id":1,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1505/44/5251f239d3456.jpg_r_640x214_88ab6a42.jpg",
+          "infoName":"乐山必游TOP10",
+          "infoDesc":"坐竹排看大佛，还有这么多好玩的地方"
+        },{
+          "id":2,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1505/63/0ffcb5c329a19c.jpg_r_640x214_93fd1e5a.jpg",
+          "infoName":"慢游成都最美古镇",
+          "infoDesc":"撷取一份悠闲，寻觅散落在时光里的幸福"
+        },{
+          "id":3,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1505/a2/78e4dbcfd45a6d.jpg_r_640x214_7a62b06a.jpg",
+          "infoName":"成都必游TOP10",
+          "infoDesc":"成都的标志，也是现代人对老成都的记忆"
+        },{
+          "id":4,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1606/66/6d3cd39ae06500.jpg_r_640x214_f7c64cd2.jpg",
+          "infoName":"绵阳必游TOP5",
+          "infoDesc":"伟大浪漫主义诗人李白的故乡"
+        },{
+          "id":5,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1505/44/5251f239d3456.jpg_r_640x214_88ab6a42.jpg",
+          "infoName":"乐山必游TOP10",
+          "infoDesc":"坐竹排看大佛，还有这么多好玩的地方"
+        },{
+          "id":6,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1505/63/0ffcb5c329a19c.jpg_r_640x214_93fd1e5a.jpg",
+          "infoName":"慢游成都最美古镇",
+          "infoDesc":"撷取一份悠闲，寻觅散落在时光里的幸福"
+        },{
+          "id":7,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1505/a2/78e4dbcfd45a6d.jpg_r_640x214_7a62b06a.jpg",
+          "infoName":"成都必游TOP10",
+          "infoDesc":"成都的标志，也是现代人对老成都的记忆"
+        },{
+          "id":8,
+          "link":"/",
+          "img":"http://img1.qunarzz.com/sight/source/1606/66/6d3cd39ae06500.jpg_r_640x214_f7c64cd2.jpg",
+          "infoName":"绵阳必游TOP5",
+          "infoDesc":"伟大浪漫主义诗人李白的故乡"
+        }]
+	}
+}
