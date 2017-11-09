@@ -2,11 +2,11 @@
   	<header class="mp-header">
   		<a class="mp-header-left iconfont icon-fanhui"></a>
   		<div class="mp-header-title" >
-	  		<router-link to="/list" class="mp-linkarea">
+	  		<router-link to="/City" class="mp-linkarea">
 		  		<i class="mp-icon-search iconfont icon-sousuo"></i>
 		  		<span class="mp-single-line">输入城市/景点/游玩主题</span>
 		  	</router-link>
-  		</div>
+  		</div>2
   		<div class="mp-header-right" >
   			<a href="/touch/toNewCityList.htm" title="城市选择" class="mp-linkarea">
 	  			<span class="mp-nav-city">
