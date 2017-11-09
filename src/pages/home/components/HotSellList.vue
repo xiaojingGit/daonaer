@@ -4,7 +4,7 @@
         <div class="hot-con">
             <ul class="hotlist">
                 <li class="hotlist-item" v-for="item in HotSellListData" :key="item.id">
-                    <router-link to="/">
+                    <router-link :to="item.link">
                         <div class="hotlist-img">
                             <img :src="item.src" alt="">
                         </div>
