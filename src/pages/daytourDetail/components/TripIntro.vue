@@ -1,5 +1,5 @@
 <template>
-    <div class="trip-detail">
+    <div class="trip-detail" id="tripCon">
         <div class="routesum">
             <div class="routesum-outter">
                 <div class="routesum-inner">

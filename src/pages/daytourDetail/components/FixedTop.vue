@@ -27,10 +27,11 @@
                 this.opacityValue = 1 / 200 * scrollTop;
             },
             onScroll() {
-                window.onscroll = (e) => {
-                    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                window.addEventListener("scroll", this.handleScroll.bind(this));
+            },
+            handleScroll() {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                     this.opacityValue = 1 / 200 * (scrollTop <= 200 ? scrollTop : 200);
-                }
             }
         }
     }

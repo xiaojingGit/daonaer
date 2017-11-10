@@ -33,14 +33,6 @@
         },
         mounted() {
             this.$store.dispatch(GET_HEADER_INFO);
-            this.onScroll();
-        },
-        methods: {
-            onScroll() {
-                window.addEventListener("scroll", (e) => {
-                    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                })
-            }
         }
     }
 </script>

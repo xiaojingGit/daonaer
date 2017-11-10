@@ -1,11 +1,11 @@
 <template>
     <div class="detail" ref="detail">
-        <div class="tab-group detail-group" ref="tabsBar">
-            <ul class="tabs" ref="tabList">
-                <li class="tabs-item active" ref="tripTab" @click="toggleTripGroup">行程介绍</li>
-                <li class="tabs-item" ref="costTab" @click="toggleCostGroup">费用说明</li>
-                <li class="tabs-item" ref="useTab" @click="toggleUseGroup">使用说明</li>
-            </ul>
+        <div class="tab-group detail-group" :class="{'fixed-top': isFixed}">
+            <div class="tabs">
+                <a href="#tripCon" class="tabs-item" :class="{active: isActive === 1}">行程介绍</a>
+                <a href="#costCon" class="tabs-item" :class="{active: isActive === 2}">费用说明</a>
+                <a href="#useIntroCon" class="tabs-item" :class="{active: isActive === 3}">使用说明</a>
+            </div>
         </div>
         <tourday-detail-trip-intro ref="trip"/>
         <tourday-detail-cost ref="cost"/>
@@ -20,6 +20,12 @@
     import useintro from './UseIntro'
 
     export default {
+        data() {
+            return {
+                isFixed: false,
+                isActive: 1
+            }
+        },
         components: {
             'tourday-detail-trip-intro': tripIntro,
             'tourday-detail-cost': cost,
@@ -27,60 +33,40 @@
         },
         mounted() {
             this.detailGroupEle = this.$refs.detail;
-            this.tripEle = this.$refs.trip.$el;
             this.costEle = this.$refs.cost.$el;
             this.useintro = this.$refs.useintro.$el;
-            this.tabItems = this.$refs.tabList.children;
             this.init();
             this.onScroll();
         },
         methods: {
             init() {
                 let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                if(scrollTop >= this.detailGroupEle.offsetTop) {
-                    this.$refs.tabsBar.className = "tab-group detail-group fixed-top";
+                if(scrollTop >= this.detailGroupEle.offsetTop - 100) {
+                    this.isFixed = true;
+                }else {
+                    this.isFixed = false;
                 }
-            },
-            toggleTripGroup(e) {
-                let scrollTop = this.tripEle.offsetTop;
-                document.documentElement.scrollTop ? document.documentElement.scrollTop = scrollTop : document.body.scrollTop = scrollTop;           
-            },
-            toggleCostGroup(e) {
-                let scrollTop = this.costEle.offsetTop;
-                document.documentElement.scrollTop ? document.documentElement.scrollTop = scrollTop : document.body.scrollTop = scrollTop;           
-            },
-            toggleUseGroup(e) {
-                let scrollTop = this.useintro.offsetTop;
-                document.documentElement.scrollTop ? document.documentElement.scrollTop = scrollTop : document.body.scrollTop = scrollTop;           
             },
             onScroll() {
                 window.addEventListener("scroll", this.handleScroll.bind(this));
             },
             handleScroll() {
                 let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                // debugger
-                if(scrollTop >= this.detailGroupEle.offsetTop) {
-                    this.$refs.tabsBar.className = "tab-group detail-group fixed-top";
+                
+                if(scrollTop >= this.detailGroupEle.offsetTop - 100) {
+                    this.isFixed = true;
                 } else {
-                    this.$refs.tabsBar.className = "tab-group detail-group";
+                    this.isFixed = false;
                 }
 
                 if(scrollTop >= this.costEle.offsetTop - 200 && scrollTop <= this.useintro.offsetTop - 200) {
-                    this.setActiveBar(this.$refs.costTab);
-                }else if(scrollTop >= this.costEle.offsetTop - 200 && scrollTop >= this.useintro.offsetTop - 200) {
-                    this.setActiveBar(this.$refs.useTab);
+                    this.isActive = 2;
+                }else if (scrollTop >= this.costEle.offsetTop - 200 && scrollTop >= this.useintro.offsetTop - 200) {
+                    this.isActive = 3;
                 }else {
-                    this.setActiveBar(this.$refs.tripTab);
+                    this.isActive = 1;
                 }
                 
-            },
-            setActiveBar(dom) {
-                dom.className = "tabs-item active";
-                for(let tabitem of this.tabItems) {
-                    if(tabitem != dom) {
-                        tabitem.className = "tabs-item";
-                    }
-                }
             }
         }
     }

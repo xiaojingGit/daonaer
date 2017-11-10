@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <router-link to="/daytourdetail" class="booking-btn">立即预订</router-link>
+            <router-link to="/orderfill?id=1" class="booking-btn">立即预订</router-link>
         </div>
     </transition>
 </template>
