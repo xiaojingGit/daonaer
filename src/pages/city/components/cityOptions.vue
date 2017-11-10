@@ -100,7 +100,6 @@
             }
               this.$refs.hotsearch.style.top=this.abc+"rem"
               this.$refs.hhh.style.top=this.bca+"rem"
-              console.log(this.abc+"rem" + this.bca+"rem")
           }
       }
     }
