@@ -60,7 +60,7 @@
                     imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png",
                     title: "故宫"
                 }, {
-                    linkTo: "",
+                    linkTo: "/list",
                     id:4,
                     imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
                     title: "一日游"
