@@ -1,10 +1,14 @@
 <template>
-    <div class="hot-header">
+    <div class="hot-header" >
         <div class="hot-header-right-return" v-if = "returnShow">
+            <a href="/">
             <span class="iconfont hot-header-return icon-fanhui"></span>
+            </a>
         </div>
-        <div class="hot-header-header" :style = "{'opacity': headerReturnOpacity}">
+        <div class="hot-header-header" :style = "{'opacity': headerReturnOpacity}" ref="div">
+            <a href="/">
             <span class="iconfont hot-header-header-return icon-fanhui"></span>
+            </a>
             故宫
         </div>
         <div class="hot-header-wrap" id="imgcontainer">
@@ -15,6 +19,30 @@
             <div class="hot-header-imgswipeicon">
                 <span class="hot-header-iconfont iconfont">&#xe618;</span>
                 <em class="hot-header-imgswipeicon-number">10</em>
+            </div>
+        </div>
+        <div class="mp-imgswipe">
+            <div class="mp-slide-closebutton">
+                <span class="mpg-iconfont"></span>
+            </div>
+            <div class="mp-imgswipe-show js-slider-picture mp-imgswipe-current" >
+                <div class="mp-imgswipe-img" style="background-image:url(http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_800x800_04f227ef.jpg)">
+                </div>
+            </div>
+            <div class="mp-imgswipe-show js-slider-picture-back">
+            </div>
+            <div class="mp-imgswipe-bar">
+                <div class="mp-imgswipe-note">
+                    <em class="js-slider-name">
+                    </em>
+                    <span class="js-slider-namesub">1 / 10</span>
+                </div>
+                <div class="mp-imgswipe-turn mp-imgswipe-prev mp-imgswipe-disabled">
+                    <span class="mpg-iconfont">F</span>
+                </div>
+                <div class="mp-imgswipe-turn mp-imgswipe-next">
+                    <span class="mpg-iconfont">F</span>
+                </div>
             </div>
         </div>
         
@@ -32,24 +60,13 @@
         },
         methods: {
             handleScroll() {
-                var newScrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-                if(newScrollTop >= 10 && newScrollTop > this.scrollTop) {
-                    this.scrollTop = newScrollTop;
-                    this.returnShow = false;
-                    this.headerReturnOpacity >= 1? this.headerReturnOpacity = 1: this.headerReturnOpacity += 0.03;
-                }else if(newScrollTop <= 100 && newScrollTop < this.scrollTop){
-                    this.scrollTop = newScrollTop;
-                    this.returnShow = false;
-                    this.headerReturnOpacity <= 0? this.headerReturnOpacity = 0: this.headerReturnOpacity -= 0.03;
-                    if(newScrollTop == 0 ){
-                    this.returnShow = true;
-                    this.headerReturnOpacity = 0;
-                }
-                } 
+                var top = (window.scrollY / 300) > 1? 1 :( window.scrollY / 300);
+                this.returnShow = (top == 0) ? true: false;
+                this.$refs.div.style.opacity = top;
             }
         },
         mounted() {
-            window.addEventListener('scroll', this.handleScroll)
+            window.addEventListener('scroll', this.handleScroll.bind(this))
         }
 	}
 
@@ -88,6 +105,7 @@
         position: absolute;
         top: 0;
         left: 5%;
+        color: #fff;
     }
     .hot-header {
         position: relative;
@@ -154,6 +172,59 @@
         background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.8)));
         background-image: -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.8));
     }
-       
- 
+    .mp-imgswipe {
+        overflow: hidden;
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #000;
+    }
+    .mp-slide-closebutton {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        top: .6rem;
+        right: .4rem;
+        width: .6rem;
+        height: .6rem;
+        padding: .2rem;
+        color: #fff;
+        font-size: .6rem;
+        -webkit-border-radius: .3rem;
+        -moz-border-radius: .3rem;
+        border-radius: .3rem;
+    }
+
+    .mp-imgswipe-show {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        left: 0px;
+        transform: translateX(0px);
+        z-index: 2;
+    }
+    .mp-imgswipe-bar {
+        position: absolute;
+        z-index: 9;
+        right: 0;
+        bottom: .4rem;
+        left: 0;
+        color: #fff;
+    }
+    .mp-imgswipe-note {
+        height: .8rem;
+        font-size: .24rem;
+        line-height: .8rem;
+        text-align: center;
+    }
+    .mp-imgswipe-note {
+        height: .8rem;
+        font-size: .24rem;
+        line-height: .8rem;
+        text-align: center;
+    }
 </style>

@@ -5,7 +5,6 @@ import App from './app/App'
 import router from './router'
 import store from './vuex'
 import FastClick from 'fastclick'
-import store from './vuex/index'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 FastClick.attach(document.body);
