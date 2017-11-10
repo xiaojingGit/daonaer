@@ -48,7 +48,7 @@
                 }
             },
             onScroll() {
-                window.addEventListener("scroll", this.handleScroll.bind(this));
+                window.addEventListener("scroll", this.handleScroll);
             },
             handleScroll() {
                 let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -67,7 +67,10 @@
                     this.isActive = 1;
                 }
                 
-            }
+            },
+		    destroyed() {
+			    window.removeEventListener("scroll", this.handleScroll);
+		    }
         }
     }
 </script>

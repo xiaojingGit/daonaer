@@ -4,7 +4,7 @@ import Home from '@/pages/home/Home'
 import DayTourDetail from '@/pages/daytourDetail/DayTourDetail'
 import OrderFill from '@/pages/orderFilling/OrderFill'
 import List from '@/pages/list/Daytrip'
-import City from '@/pages/city/City'
+import City from '@/pages/search/City'
 
 Vue.use(Router)
 

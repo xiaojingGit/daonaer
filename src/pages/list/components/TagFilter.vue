@@ -27,12 +27,13 @@
 		props:["tagFilterInfo"],
 		data:function(){
 			return{
-				isShow:false,
-				isA:true,
-				isAction:false,
-				isWidth:false,
-				isFixed:false,
-				isClick:false
+				isShow: false,
+				isA: true,
+				isAction: false,
+				isWidth: false,
+				isFixed: false,
+				isClick: false,
+				scrollTop: 0
 			}
 		},
 		mounted:function(){
@@ -42,7 +43,9 @@
    					bounce:true,
    					click: true
 				}) 
-			})			
+			})
+
+			window.addEventListener('scroll', this.handleFixed);			
 		},
 		methods:{
 			toggle:function(){
@@ -62,13 +65,25 @@
 						}) 
 					})	
 				}else{
-					this.isClick=false;
+					this.isClick = false;
 					window.removeEventListener('scroll', this.handleScroll);
 					this.isShow = false;
 					this.scroll.destroy();
 					this.scroll = null;
 					this.scrolls;	
 				} 
+			},
+			handleFixed() {
+				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+				if(scrollTop > this.scrollTop){
+					this.isFixed = false;
+				}else{
+					this.isFixed = true;
+					if(scrollTop <= 90) {
+						this.isFixed = false;
+					}
+				}
+				this.scrollTop = scrollTop;
 			},
 			handleScroll:function(){
 				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -108,6 +123,10 @@
 					this.scrolls;
 				} 
 			}
+		},
+		destroyed() {
+			window.removeEventListener("scroll", this.handleScroll);
+			window.removeEventListener("scroll", this.handleFixed);
 		}
 	}
 </script>

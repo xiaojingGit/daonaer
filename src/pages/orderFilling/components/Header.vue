@@ -1,6 +1,6 @@
 <template>
     <div class="mp-header">
-        <router-link to="/" mp-role="left" class="mp-header-left" >
+        <router-link to="/daytourdetail" mp-role="left" class="mp-header-left" >
             <span class="iconfont icon-fanhui"></span>
         </router-link>
         <h1 mp-role="title" class="mp-header-title">订单填写</h1>
