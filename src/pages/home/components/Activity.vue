@@ -10,20 +10,20 @@
         </ul>
 
         <ul class="activity-img-list">
-            <li class="activity-img-item">
-                <img class="activity-item-img" src="http://img1.qunarzz.com/piao/fusion/1710/a2/e395615b16fb1302.png" />
-            </li>
-            <li class="activity-img-item">
-                <img class="activity-item-img" src="http://img1.qunarzz.com/piao/fusion/1710/54/1685d2108b652302.png" />
+            <li class="activity-img-item" v-for="item in ActivityDataImages" :key="item.id">
+                <router-link :to="item.linkTo">
+                    <img class="activity-item-img" :src="item.imgUrl" />
+                </router-link>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
-  export default {
-
-  }
+    import { mapGetters } from 'vuex';
+    export default {
+        computed: mapGetters(["ActivityDataImages"])
+    }
 </script>
 
 <style>
