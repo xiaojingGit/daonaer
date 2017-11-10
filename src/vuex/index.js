@@ -4,6 +4,7 @@ import home from "../pages/home/module.js"
 import tourday from '../pages/daytourDetail/module'
 import orderfill from '../pages/orderFilling/module'
 import list from '../pages/list/module.js'
+import hotDetail from "../pages/hotDetail/module"
 
 Vue.use(Vuex);
 
@@ -12,6 +13,7 @@ export default new Vuex.Store({
         home: home,
         tourday: tourday,
         orderfill: orderfill,
-        list: list
+        list: list,
+        hotDetail: hotDetail
     }
 })
