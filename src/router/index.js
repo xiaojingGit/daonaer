@@ -19,6 +19,7 @@ export default new Router({
       name: 'List',
       component: List
     },
+    {
       path: '/daytourdetail',
       name: 'DayTourDetail',
       component: DayTourDetail
