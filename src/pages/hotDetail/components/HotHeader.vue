@@ -11,7 +11,7 @@
             </a>
             故宫
         </div>
-        <div class="hot-header-wrap" id="imgcontainer">
+        <div class="hot-header-wrap" id="imgcontainer" @click = "ifShowImgList">
             <img class="hot-header-img" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt="故宫">
         </div>
         <div class="hot-header-info">
@@ -21,48 +21,59 @@
                 <em class="hot-header-imgswipeicon-number">10</em>
             </div>
         </div>
-        <div class="mp-imgswipe">
-            <div class="mp-slide-closebutton">
-                <span class="mpg-iconfont"></span>
-            </div>
-            <div class="mp-imgswipe-show js-slider-picture mp-imgswipe-current" >
-                <div class="mp-imgswipe-img" style="background-image:url(http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_800x800_04f227ef.jpg)">
-                </div>
-            </div>
-            <div class="mp-imgswipe-show js-slider-picture-back">
-            </div>
-            <div class="mp-imgswipe-bar">
-                <div class="mp-imgswipe-note">
-                    <em class="js-slider-name">
-                    </em>
-                    <span class="js-slider-namesub">1 / 10</span>
-                </div>
-                <div class="mp-imgswipe-turn mp-imgswipe-prev mp-imgswipe-disabled">
-                    <span class="mpg-iconfont">F</span>
-                </div>
-                <div class="mp-imgswipe-turn mp-imgswipe-next">
-                    <span class="mpg-iconfont">F</span>
-                </div>
-            </div>
+        <div v-if = "showImgList" class="mp-imgswiper" @click = "closeImgList">
+            <swiper :options="swiperOption"  ref="mySwiper">
+                <swiper-slide v-for="item in imgList" :key="item.id">
+                    <div class="img-box">
+                        <img class="swiper-img" :src="item.imgUrl"/>
+                    </div>
+                    
+                </swiper-slide>
+                
+            </swiper>
+            <div class="mp-imgswipe-bar"></div>
         </div>
         
     </div>
 </template>
 
 <script>
+    import {swiper, swiperSlide} from 'vue-awesome-swiper';
     export default {
+        props: ['imgList'],
         data() {
             return{
                 returnShow: true,
                 headerReturnOpacity: 0,
-                scrollTop: 0
+                scrollTop: 0,
+                swiperOption: {
+		          	direction: 'horizontal',
+		          	autoHeight: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    paginationClickable: true,
+                    spaceBetween: 10,
+                    pagination: '.mp-imgswipe-bar',
+                    paginationType: 'fraction'
+                },
+                showImgList: false
             }  
+        },
+        components: {
+            swiper: swiper,
+            "swiper-slide": swiperSlide
         },
         methods: {
             handleScroll() {
                 var top = (window.scrollY / 300) > 1? 1 :( window.scrollY / 300);
                 this.returnShow = (top == 0) ? true: false;
                 this.$refs.div.style.opacity = top;
+            },
+            ifShowImgList() {
+                this.showImgList = true;
+            },
+            closeImgList() {
+                this.showImgList = false;
             }
         },
         mounted() {
@@ -73,6 +84,14 @@
 </script>
 
 <style scoped>
+    .swiper-wrapper {
+        margin-top: 3rem;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+    }
     .hot-header-return{
         position: absolute;
         top: .1rem;
@@ -172,8 +191,9 @@
         background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.8)));
         background-image: -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.8));
     }
-    .mp-imgswipe {
+    .mp-imgswiper {
         overflow: hidden;
+        padding-top: 3rem;
         position: fixed;
         z-index: 99;
         top: 0;
@@ -181,22 +201,15 @@
         width: 100%;
         background-color: #000;
     }
-    .mp-slide-closebutton {
-        display: none;
-        position: absolute;
-        z-index: 3;
-        top: .6rem;
-        right: .4rem;
-        width: .6rem;
-        height: .6rem;
-        padding: .2rem;
-        color: #fff;
-        font-size: .6rem;
-        -webkit-border-radius: .3rem;
-        -moz-border-radius: .3rem;
-        border-radius: .3rem;
+    .img-box {
+        z-index: 1000;
+        width: 100%;
+        height: 5rem;
     }
-
+    .swiper-img {
+        width: 100%;
+        height: 100%;
+    }
     .mp-imgswipe-show {
         position: absolute;
         z-index: 1;
@@ -209,22 +222,18 @@
     }
     .mp-imgswipe-bar {
         position: absolute;
-        z-index: 9;
+        z-index: 1009;
         right: 0;
-        bottom: .4rem;
-        left: 0;
+        width: 100%;
+        height: .8rem;
         color: #fff;
+        text-align: center;
     }
     .mp-imgswipe-note {
-        height: .8rem;
+        
         font-size: .24rem;
         line-height: .8rem;
         text-align: center;
     }
-    .mp-imgswipe-note {
-        height: .8rem;
-        font-size: .24rem;
-        line-height: .8rem;
-        text-align: center;
-    }
+  
 </style>

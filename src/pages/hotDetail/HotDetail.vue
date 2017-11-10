@@ -1,13 +1,13 @@
 <template>
   	<div class="hotDetail-page">
-    	<hot-header />
+    	<hot-header :imgList = "imgList" />
         <hot-base-info />
         <hot-comment />
         <hot-notice />
         <hot-recommendation />
         <hot-tickets-list :ticketsList="ticketsList" />
         <hot-user-comments />
-        <hot-other-attractions :otherAttractions = "otherAttractions"/>
+        <hot-other-attractions :otherAttractions = "otherAttractions" />
     </div>
 </template>
 
@@ -40,6 +40,9 @@ export default {
         },
         otherAttractions: (state) => {
             return state.hotDetail.otherAttractions
+        },
+        imgList: (state) => {
+            return state.hotDetail.imgList
         }
     }),
     mounted() {

@@ -2,12 +2,14 @@
  export default {
     state: {
         todayTickets:[],
-        otherAttractions:[]
+        otherAttractions:[],
+        imgList: []
     },
     mutations: {
         setdata(state, payload) {
             state.todayTickets = payload.ticketsList;
             state.otherAttractions = payload.othersAttractiona; 
+            state.imgList = payload.imgList;
         }
     },
     actions: {
