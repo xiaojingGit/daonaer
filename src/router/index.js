@@ -4,7 +4,8 @@ import Home from '@/pages/home/Home'
 import DayTourDetail from '@/pages/daytourDetail/DayTourDetail'
 import OrderFill from '@/pages/orderFilling/OrderFill'
 import List from '@/pages/list/Daytrip'
-import City from '@/pages/search/City'
+import Search from '@/pages/search/Search'
+import City from '@/pages/city/City'
 
 Vue.use(Router)
 
@@ -31,7 +32,12 @@ export default new Router({
       component: List
     },
     {
-      path: '/City',
+      path: '/search',
+      name: 'Search',
+      component: Search
+    },
+    {
+      path: '/city', 
       name: 'City',
       component: City
     }

@@ -2,17 +2,17 @@
   	<header class="mp-header">
   		<a class="mp-header-left iconfont icon-fanhui"></a>
   		<div class="mp-header-title" >
-	  		<router-link to="/City" class="mp-linkarea">
+	  		<router-link to="/search" class="mp-linkarea">
 		  		<i class="mp-icon-search iconfont icon-sousuo"></i>
 		  		<span class="mp-single-line">输入城市/景点/游玩主题</span>
 		  	</router-link>
   		</div>
   		<div class="mp-header-right" >
-  			<a href="/touch/toNewCityList.htm" title="城市选择" class="mp-linkarea">
+  			<router-link to="/city" title="城市选择" class="mp-linkarea">
 	  			<span class="mp-nav-city">
 	  			北京<i class="mp-iconfont"></i>
 	  			</span>
-  			</a>
+  			</router-link>
   		</div>
   	</header>
 </template>

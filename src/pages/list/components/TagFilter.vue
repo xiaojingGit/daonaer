@@ -79,7 +79,7 @@
 					this.isFixed = false;
 				}else{
 					this.isFixed = true;
-					if(scrollTop <= 90) {
+					if(scrollTop <= this.$refs.top.offsetTop) {
 						this.isFixed = false;
 					}
 				}
