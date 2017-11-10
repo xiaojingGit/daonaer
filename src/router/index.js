@@ -4,6 +4,7 @@ import Home from '@/pages/home/Home'
 import DayTourDetail from '@/pages/daytourDetail/DayTourDetail'
 import OrderFill from '@/pages/orderFilling/OrderFill'
 import List from '@/pages/list/Daytrip'
+import City from '@/pages/city/City'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/list',
       name: 'List',
       component: List
+    },
+    {
+      path: '/City',
+      name: 'City',
+      component: City
     }
   ]
 })

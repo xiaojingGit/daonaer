@@ -115,7 +115,7 @@
           "title": "故宫",
           "desc": "东方宫殿建筑代表，世界宫殿建筑典范",
           "price": 40,
-          "link": "/hotDetail"
+          "link": "/hotdetail"
       }, {
           "id": 2,
           "src": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_140x140_97813766.jpg",
