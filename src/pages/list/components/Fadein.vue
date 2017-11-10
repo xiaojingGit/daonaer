@@ -20,19 +20,12 @@
 </template>
 <script>
 	export default {
-		data:function(){
-			return{
-				scrollTop:0
-			}
-		},
 		mounted:function(){
-			window.addEventListener('scroll',this.handleScroll.bind(this))
+			window.addEventListener('scroll',this.handleScroll)
 		},
 		methods:{
 			handleScroll:function(){
 				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
-				let topFixed = document.querySelector(".daytrip-tagfilter-container").offsetTop
-				console.log(topFixed)
 				if(scrollTop > this.scrollTop){
 					this.$refs.fadein.style.transform = "translateY(100%)"
 				}else{
@@ -40,6 +33,9 @@
 				}
 				this.scrollTop = scrollTop;
 			}
+		},
+		destroyed:function(){
+			window.removeEventListener('scroll',this.handleScroll)
 		}
 	}
 </script>

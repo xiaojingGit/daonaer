@@ -32,7 +32,8 @@
 				isAction:false,
 				isWidth:false,
 				isFixed:false,
-				isClick:false
+				isClick:false,
+				scrollTop:0
 			}
 		},
 		mounted:function(){
@@ -42,14 +43,15 @@
    					bounce:true,
    					click: true
 				}) 
-			})			
+			})
+			window.addEventListener('scroll',this.handleFixed)		
 		},
 		methods:{
 			toggle:function(){
-				this.isShow = !this.isShow
-				this.isA = !this.isA
-				this.isAction = !this.isAction
-				this.isWidth = !this.isWidth
+				this.isShow = !this.isShow;
+				this.isA = !this.isA;
+				this.isAction = !this.isAction;
+				this.isWidth = !this.isWidth;
 				if(!this.isClick){
 					this.isClick=true;
 					window.addEventListener('scroll', this.handleScroll);
@@ -107,6 +109,22 @@
 					this.scroll = null;
 					this.scrolls;
 				} 
+			},
+			handleFixed:function(){
+				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+				if(scrollTop > this.scrollTop){
+					this.isFixed = false;
+				}else{
+					this.isFixed = true;
+					if(scrollTop <= 88){
+						this.isFixed = false;
+					}	
+				}
+				this.scrollTop = scrollTop;
+			},
+			destroyed:function(){
+				window.removeEventListener('scroll', this.handleFixed);
+				window.removeEventListener('scroll', this.handleScroll);
 			}
 		}
 	}
