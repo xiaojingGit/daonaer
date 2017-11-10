@@ -34,8 +34,7 @@
   						</div>
   					</div>
   				</div>
-  				<router-link class="daytrip-ticket-link" to="/daytourdetail
-">{item.title}</router-link>
+  				<router-link class="daytrip-ticket-link" to="/daytourdetail">{item.title}</router-link>
   			</li>
   			</div>
   		</ul>
