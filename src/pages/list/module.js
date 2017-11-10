@@ -3,8 +3,7 @@ import {SET_DATA,AJAX_GET_DATA} from "./types.js"
 export default{
 	state: {
 		ticketInfo:[],
-		tagFilterInfo:[],
-		offset:0
+		tagFilterInfo:[]
 	},
 	mutations: {
 		[SET_DATA](state,payload){

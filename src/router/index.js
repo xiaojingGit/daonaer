@@ -16,6 +16,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/list',
+      name: 'List',
+      component: List
+    },
+    {
       path: '/daytourdetail',
       name: 'DayTourDetail',
       component: DayTourDetail
@@ -24,11 +29,6 @@ export default new Router({
       path: '/orderfill',
       name: 'OrderFill',
       component: OrderFill
-    },
-    {
-      path: '/list',
-      name: 'List',
-      component: List
     },
     {
       path: '/City',
