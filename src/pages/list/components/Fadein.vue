@@ -1,5 +1,5 @@
 <template>
-  	<div class="daytrip-bottom-bar daytrip-bottom-fadein" :style="{transform:translateY}" ref="fadein">
+  	<div class="daytrip-bottom-bar daytrip-bottom-fadein" ref="fadein">
   		<div class="daytrip-typefilter-outer">
   			<ul class="daytrip-typefilter daytrip-flexbox">
   				<li class="daytrip-typefilter-item daytrip-flexbox-layout">
@@ -20,28 +20,22 @@
 </template>
 <script>
 	export default {
-		data:function(){
-			return{
-				scrollTop:0,
-				translateY: 'translateY(0)'
-			}
-		},
 		mounted:function(){
-			window.addEventListener('scroll',this.handleScroll);
+			window.addEventListener('scroll',this.handleScroll)
 		},
 		methods:{
 			handleScroll:function(){
 				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
 				if(scrollTop > this.scrollTop){
-					this.translateY = "translateY(100%)";
+					this.$refs.fadein.style.transform = "translateY(100%)"
 				}else{
-					this.translateY = "translateY(0)";		
+					this.$refs.fadein.style.transform = "translateY(0)"			
 				}
 				this.scrollTop = scrollTop;
 			}
 		},
-		destroyed() {
-			window.removeEventListener("scroll", this.handleScroll);
+		destroyed:function(){
+			window.removeEventListener('scroll',this.handleScroll)
 		}
 	}
 </script>

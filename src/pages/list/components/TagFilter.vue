@@ -27,13 +27,13 @@
 		props:["tagFilterInfo"],
 		data:function(){
 			return{
-				isShow: false,
-				isA: true,
-				isAction: false,
-				isWidth: false,
-				isFixed: false,
-				isClick: false,
-				scrollTop: 0
+				isShow:false,
+				isA:true,
+				isAction:false,
+				isWidth:false,
+				isFixed:false,
+				isClick:false,
+				scrollTop:0
 			}
 		},
 		mounted:function(){
@@ -44,15 +44,14 @@
    					click: true
 				}) 
 			})
-
-			window.addEventListener('scroll', this.handleFixed);			
+			window.addEventListener('scroll',this.handleFixed)		
 		},
 		methods:{
 			toggle:function(){
-				this.isShow = !this.isShow
-				this.isA = !this.isA
-				this.isAction = !this.isAction
-				this.isWidth = !this.isWidth
+				this.isShow = !this.isShow;
+				this.isA = !this.isA;
+				this.isAction = !this.isAction;
+				this.isWidth = !this.isWidth;
 				if(!this.isClick){
 					this.isClick=true;
 					window.addEventListener('scroll', this.handleScroll);
@@ -65,25 +64,13 @@
 						}) 
 					})	
 				}else{
-					this.isClick = false;
+					this.isClick=false;
 					window.removeEventListener('scroll', this.handleScroll);
 					this.isShow = false;
 					this.scroll.destroy();
 					this.scroll = null;
 					this.scrolls;	
 				} 
-			},
-			handleFixed() {
-				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
-				if(scrollTop > this.scrollTop){
-					this.isFixed = false;
-				}else{
-					this.isFixed = true;
-					if(scrollTop <= this.$refs.top.offsetTop) {
-						this.isFixed = false;
-					}
-				}
-				this.scrollTop = scrollTop;
 			},
 			handleScroll:function(){
 				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -122,11 +109,23 @@
 					this.scroll = null;
 					this.scrolls;
 				} 
+			},
+			handleFixed:function(){
+				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+				if(scrollTop > this.scrollTop){
+					this.isFixed = false;
+				}else{
+					this.isFixed = true;
+					if(scrollTop <= 88){
+						this.isFixed = false;
+					}	
+				}
+				this.scrollTop = scrollTop;
+			},
+			destroyed:function(){
+				window.removeEventListener('scroll', this.handleFixed);
+				window.removeEventListener('scroll', this.handleScroll);
 			}
-		},
-		destroyed() {
-			window.removeEventListener("scroll", this.handleScroll);
-			window.removeEventListener("scroll", this.handleFixed);
 		}
 	}
 </script>

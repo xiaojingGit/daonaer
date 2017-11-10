@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
+import HotDetail from '@/pages/hotDetail/HotDetail'
 import DayTourDetail from '@/pages/daytourDetail/DayTourDetail'
 import OrderFill from '@/pages/orderFilling/OrderFill'
 import List from '@/pages/list/Daytrip'
@@ -15,6 +16,15 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Home
+    }, {
+      path: '/hotdetail',
+      name: 'Hotdetail',
+      component: HotDetail
+    },
+    {
+      path: '/list',
+      name: 'List',
+      component: List
     },
     {
       path: '/daytourdetail',
@@ -25,11 +35,6 @@ export default new Router({
       path: '/orderfill',
       name: 'OrderFill',
       component: OrderFill
-    },
-    {
-      path: '/list',
-      name: 'List',
-      component: List
     },
     {
       path: '/search',
