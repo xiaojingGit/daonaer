@@ -33,7 +33,7 @@
             </swiper>
             <div class="mp-imgswipe-bar"></div>
         </div>
-        
+       
     </div>
 </template>
 
