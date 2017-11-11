@@ -1,12 +1,12 @@
 <template>
     <div class="city-header">
-        <router-link to="" class="city-header-left iconfont icon-fanhui"></router-link>
+        <router-link to="/" class="city-header-left iconfont icon-fanhui"></router-link>
         <div class="city-header-center">
             <input type="text" class="city-header-center-input" placeholder="输入城市或景点">
         </div>
         
         <div class="city-header-right">
-            <router-link to="/">
+            <router-link to="">
                 <span class="city-header-right-search">搜索</span>
              </router-link>
         </div>

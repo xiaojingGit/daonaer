@@ -6,7 +6,7 @@ export default {
         "headerInfo": {},
         "productEval": {},
         "mapInfo": {
-            position: [0, 0]
+            position: [116.397026,39.918058]
         }
     },
     actions: {
