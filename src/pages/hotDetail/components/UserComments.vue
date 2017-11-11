@@ -14,49 +14,9 @@
                     <p class="comment-content" :class="{'comment-content-open': !showMore}">直接把故宫所有需要买票的地方的票都买了，不用取票，直接刷身份证就可以进，很方便，这次去的时间可能不凑巧，最中央的几个大殿都不让进，只有钟表馆，珍宝馆还有其他的陈列文物的地方是允许进的，不过我对钟表馆里的各种钟表是欣赏不来的，珍宝馆里的玉石雕刻的确是很精巧，故宫一趟转下来腿都要断了。。真的是很大，光看没有什么感觉，只有转的时候才能真正体会到故宫的宏伟。</p>
                     <div class="comment-foldbtn iconfont" @click = "handleClick" :class="{'icon-down-trangle': showMore, 'icon-up': !showMore}"></div>
                     <div class="comment-imgs" role="scrollImages">
-                        <div class="comment-imgouter">
+                        <div class="comment-imgouter"  v-for = "item in commentsImg" :key = "item.id">
                             <div class="comment-imginner">
-                                <img class="comment-img" src="http://img1.qunarzz.com/piao/fusion/1709/97/4b253b4f685bd02.jpg_228x168_df830bed.jpg" style="">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter">
-                            <div class="comment-imginner">
-                                <img class="comment-img" src="http://img1.qunarzz.com/piao/fusion/1709/f3/d00a465647306e02.jpg_228x168_d9a4bb9e.jpg" style="">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter">
-                            <div class="comment-imginner">
-                                <img class="comment-img"  src="http://img1.qunarzz.com/piao/fusion/1709/4d/3ddcd92224397a02.jpg_228x168_d3a311f9.jpg" style="">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter">
-                            <div class="comment-imginner">
-                                <img class="comment-img"  src="http://img1.qunarzz.com/piao/fusion/1709/b2/89015b9a783c3102.jpg_228x168_eebd2965.jpg" style="">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter">
-                            <div class="comment-imginner">
-                                <img class="comment-img" src="http://img1.qunarzz.com/piao/fusion/1709/c3/a84ee5d149b73a02.jpg_228x168_53aab06b.jpg" style="">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter">
-                            <div class="comment-imginner">
-                                <img class="comment-img"  src="http://img1.qunarzz.com/piao/fusion/1709/58/dc9febcf3b539b02.jpg_228x168_4dc89937.jpg" style="">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter" style="display:none;">
-                            <div class="comment-imginner">
-                                <img class="comment-img" src="http://img1.qunarzz.com/piao/fusion/1709/a9/ffe24922ef37c102.jpg">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter" style="display:none;">
-                            <div class="comment-imginner">
-                                <img class="comment-img" src="http://img1.qunarzz.com/piao/fusion/1709/77/64828fb80cf8fa02.jpg_228x168_79c85ce6.jpg">
-                            </div>
-                        </div>
-                        <div class="comment-imgouter" style="display:none;">
-                            <div class="comment-imginner">
-                                <img class="comment-img" src="http://img1.qunarzz.com/piao/fusion/1709/ad/b648ae81895f502.jpg_228x168_7fd75186.jpg" >
+                                <img class="comment-img" v-lazy="item.imgUrl" style="">
                             </div>
                         </div>
                         <div class="comment-imgnumtag">
@@ -76,6 +36,7 @@
 
 <script>
     export default {
+        props: ['commentsImg'],
         data() {
             return {
                 showMore: true

@@ -74,7 +74,7 @@
 
 <script>
     export default {
-        props:["ticketsList"],
+        props: ["ticketsList"],
         data() {
             return {
                 showBuyTypes: 0,

@@ -1,15 +1,17 @@
  import axios from 'axios'
  export default {
     state: {
-        todayTickets:[],
+        ticketsList:[],
         otherAttractions:[],
-        imgList: []
+        imgList: [],
+        commentsImg: []
     },
     mutations: {
         setdata(state, payload) {
-            state.todayTickets = payload.ticketsList;
+            state.ticketsList = payload.ticketsList;
             state.otherAttractions = payload.othersAttractiona; 
             state.imgList = payload.imgList;
+            state.commentsImg = payload.commentsImg;
         }
     },
     actions: {

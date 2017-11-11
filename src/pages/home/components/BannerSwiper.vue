@@ -41,6 +41,7 @@
 <style>
   .home-swiper-pagination {
       position: absolute;
+      bottom: 0rem;
       height: .2rem;
       z-index: 9;
       text-align: center;
@@ -59,15 +60,16 @@
 </style>
 
 <style scoped>
-  .home-reserved-space {
-      height: 0;
-      padding-bottom: 31.25%;
-  }
+    .home-reserved-space {
+        height: 0;
+        padding-bottom: 31.25%;
+    }
 	.img-box {
-      width: 100%;
+        height: 2rem;
+        width: 100%;
 	}
 	.swiper-img {
-		  width: 100%;
+		width: 100%;
 	}
 
 </style>
