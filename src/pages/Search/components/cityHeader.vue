@@ -6,7 +6,7 @@
         </div>
         
         <div class="city-header-right">
-            <router-link to="">
+            <router-link to="/">
                 <span class="city-header-right-search">搜索</span>
              </router-link>
         </div>

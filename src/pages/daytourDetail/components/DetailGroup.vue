@@ -2,9 +2,9 @@
     <div class="detail" ref="detail">
         <div class="tab-group detail-group" :class="{'fixed-top': isFixed}">
             <div class="tabs">
-                <a href="#tripCon" class="tabs-item" :class="{active: isActive === 1}">行程介绍</a>
-                <a href="#costCon" class="tabs-item" :class="{active: isActive === 2}">费用说明</a>
-                <a href="#useIntroCon" class="tabs-item" :class="{active: isActive === 3}">使用说明</a>
+                <a href="javascript:void(0)" @click="toggleCon('#tripCon')" class="tabs-item" :class="{active: isActive === 1}">行程介绍</a>
+                <a href="javascript:void(0)" @click="toggleCon('#costCon')" class="tabs-item" :class="{active: isActive === 2}">费用说明</a>
+                <a href="javascript:void(0)" @click="toggleCon('#useIntroCon')" class="tabs-item" :class="{active: isActive === 3}">使用说明</a>
             </div>
         </div>
         <tourday-detail-trip-intro ref="trip"/>
@@ -46,6 +46,10 @@
                 }else {
                     this.isFixed = false;
                 }
+            },
+            toggleCon(id) {
+                const offsetTop = document.querySelector(id).offsetTop;
+                document.documentElement ? document.documentElement.scrollTop = offsetTop : document.body.scrollTop = offsetTop;
             },
             onScroll() {
                 window.addEventListener("scroll", this.handleScroll);

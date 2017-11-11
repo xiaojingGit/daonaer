@@ -10,7 +10,7 @@
   		<div class="mp-header-right" >
   			<router-link to="/city" title="城市选择" class="mp-linkarea">
 	  			<span class="mp-nav-city">
-	  			北京<i class="mp-iconfont"></i>
+	  			{{cityName}}<i class="mp-iconfont"></i>
 	  			</span>
   			</router-link>
   		</div>
@@ -18,7 +18,11 @@
 </template>
 <script>
 	export default {
-
+		computed: {
+			cityName() {
+				return this.$store.state.city.defaultCity
+			}
+		}
 	}
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="traveller-box">
         <div v-for="(item, index) in travellerNum" class="traveller">
             <div class="intro-row border-bottom">
                 <label class="row-field">游客{{index + 1}}</label>
@@ -29,6 +29,9 @@
 </script>
 
 <style scoped>
+    .traveller-box {
+        margin-bottom: 1rem;
+    }
     .traveller {
         position: relative;
         margin: .2rem 0;
