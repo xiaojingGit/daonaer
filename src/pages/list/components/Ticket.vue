@@ -1,67 +1,75 @@
 <template>
-  	<div class="daytrip-ticket-wrapper">
-  		<ul class="daytrip-ticket-list">
-  			<div v-for="(items,index) in ticketInfo" :key="index">
-  			<li class="daytrip-ticket-item" v-for="item in items" :key="item.id">
-  				<div class="daytrip-ticket-imgcon">
-  					<img class="daytrip-ticket-img" v-lazy="item.imgsrc">
-  					<span class="daytrip-ticket-bookingflag">
-  						<span class="daytrip-ticket-bookingtext">可定明日</span>
-  					</span>
-  				</div>
-  				<div class="daytrip-ticket-productinfo">
-  					<h4 class="daytrip-ticket-productname daytrip-ellipsis">{{item.title}}</h4>
-  					<div class="daytrip-ticket-taglist">
-  						<div class="daytrip-ticket-tagitem ticket-tagitem-firstcolor">北京出发</div>
-  						<div class="daytrip-ticket-tagitem">无自费</div>
-  						<div class="daytrip-ticket-tagitem">无购物</div>
-  					</div>
-  					<div class="daytrip-ticket-cashback">
-  						<span class="daytrip-ticket-cashitem">
-  							赠券
-  						</span>
-  					</div>
-  					<div class="daytrip-ticket-priceinfo">
-  						<span class="daytrip-ticket-qunarprice">
-  							&yen;
-  							<em>{{item.price}}</em>
-  						</span>
-  						<span class="daytrip-ticket-priceflg">起</span>
-  					</div>
-  					<div class="daytrip-ticket-moreinfo">
-  						<div class="daytrip-ticket-soldnum">
-  							已售{{item.soldnum}}
-  						</div>
-  					</div>
-  				</div>
-  				<router-link class="daytrip-ticket-link" to="/daytourdetail">{item.title}</router-link>
-  			</li>
-  			</div>
-  		</ul>
-  	</div>
+	<div>
+		<div class="daytrip-ticket-wrapper">
+			<ul class="daytrip-ticket-list">
+					<li class="daytrip-ticket-item" v-for="item in ticketInfo" :key="item.id">
+						<div class="daytrip-ticket-imgcon">
+							<img class="daytrip-ticket-img" v-lazy="item.imgsrc">
+							<span class="daytrip-ticket-bookingflag">
+								<span class="daytrip-ticket-bookingtext">可定明日</span>
+							</span>
+						</div>
+						<div class="daytrip-ticket-productinfo">
+							<h4 class="daytrip-ticket-productname daytrip-ellipsis">{{item.title}}</h4>
+							<div class="daytrip-ticket-taglist">
+								<div class="daytrip-ticket-tagitem ticket-tagitem-firstcolor">北京出发</div>
+								<div class="daytrip-ticket-tagitem">无自费</div>
+								<div class="daytrip-ticket-tagitem">无购物</div>
+							</div>
+							<div class="daytrip-ticket-cashback">
+								<span class="daytrip-ticket-cashitem">
+									赠券
+								</span>
+							</div>
+							<div class="daytrip-ticket-priceinfo">
+								<span class="daytrip-ticket-qunarprice">
+									&yen;
+									<em>{{item.price}}</em>
+								</span>
+								<span class="daytrip-ticket-priceflg">起</span>
+							</div>
+							<div class="daytrip-ticket-moreinfo">
+								<div class="daytrip-ticket-soldnum">
+									已售{{item.soldnum}}
+								</div>
+							</div>
+						</div>
+						<router-link class="daytrip-ticket-link" to="/daytourdetail">{item.title}</router-link>
+					</li>
+			</ul>
+		</div>
+		<daytrip-pagination :ticketInfo="allTicketInfo" :pageSize="pageSize" @pageChage="changePageData"/>
+	</div>
 </template>
 <script>
+
+	import pagination from './Pagination'
+
 	export default {
-		// props:["ticketInfo"],
-		computed:{
-			ticketInfo:function(){
-				//console.log(this.$store.state.list.ticketInfo)
-				const result = [];
-				this.$store.state.list.ticketInfo.forEach((value,index)=>{
-					let page = Math.floor(index/5);
-					if(!result[page]){
-						result[page] = [];
-					}
-					result[page].push(value);
-				})
-				//console.log(result)
-				return result;
+		data() {
+			return {
+				ticketInfo: this.$store.state.list.ticketInfo
 			}
+		},
+		computed: {
+			allTicketInfo() {
+				return this.$store.state.list.ticketInfo;
+			},
+			pageSize() {
+				return this.$store.state.list.pageSize;
+			}
+		},
+		methods: {
+			changePageData(ticketInfo) {
+				this.ticketInfo = ticketInfo;
+			}
+		},
+		components: {
+			"daytrip-pagination":pagination
 		}
 	}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 	.daytrip-ticket-list{
 		background: #fff;

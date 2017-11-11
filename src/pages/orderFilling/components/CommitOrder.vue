@@ -3,7 +3,7 @@
         <div class="booking-intro">
             <em class="booking-right">产品价格</em>
             <strong class="booking-right booking-price">
-                ￥<em class="price-num">208</em>
+                ￥<em class="price-num">{{$store.state.orderfill.num}}</em>
             </strong>
         </div>
         <router-link to="/" class="booking-btn">提交订单</router-link>

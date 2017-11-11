@@ -30,14 +30,11 @@
 		},
 		methods:{
 			handleScroll:function(){
-				console.log(222);
 				let scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
 				if(scrollTop > this.scrollTop){
 					this.translateY = "translateY(100%)";
-					// this.$refs.fadein.style.transform = "translateY(100%)"
 				}else{
-					this.translateY = "translateY(0)";
-					// this.$refs.fadein.style.transform = "translateY(0)"			
+					this.translateY = "translateY(0)";			
 				}
 				this.scrollTop = scrollTop;
 			}

@@ -3,7 +3,6 @@
     	<daytrip-header />
     	<daytrip-tagfilter :tagFilterInfo = "tagFilterInfo"/>
     	<daytrip-ticket :ticketInfo="ticketInfo" />
-    	<daytrip-pagination :ticketInfo="ticketInfo"/>
     	<daytrip-fadein />
     </div>
 </template>
@@ -11,7 +10,6 @@
 import header from './components/Header'
 import tagfilter from './components/TagFilter'
 import ticket from './components/ticket'
-import pagination from './components/Pagination'
 import fadein from './components/Fadein'
 import axios from 'axios'
 import {AJAX_GET_DATA} from './types.js'
@@ -21,7 +19,6 @@ export default {
 		"daytrip-header":header,
 		"daytrip-tagfilter":tagfilter,
 		"daytrip-ticket":ticket,
-		"daytrip-pagination":pagination,
 		"daytrip-fadein":fadein
 	},
 	computed:mapState({
