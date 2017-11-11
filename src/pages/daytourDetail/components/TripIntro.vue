@@ -74,7 +74,7 @@
                 <router-link to="/daytourdetail" class="link-morepro-intro">查看更多产品介绍</router-link>
             </div>
             <div class="trip-map">
-                地图
+                <trip-map :position="position"/>
             </div>
         </div>
     </div>
@@ -82,8 +82,17 @@
 
 <script>
 
-    export default {
+    import map from './Map'
 
+    export default {
+        computed: {
+            position() {
+                return this.$store.state.tourday.mapInfo.position
+            }
+        },
+        components: {
+            'trip-map': map
+        }
     }
 </script>
 

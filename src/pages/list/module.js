@@ -4,7 +4,7 @@ export default{
 	state: {
 		ticketInfo:[],
 		tagFilterInfo:[],
-		pageSize: 4,
+		pageSize: 7,
 		totalNum: 0
 	},
 	mutations: {

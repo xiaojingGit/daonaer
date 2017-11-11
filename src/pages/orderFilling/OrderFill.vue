@@ -6,7 +6,7 @@
             <order-fill-product-card :data="data"/>
             <order-fill-buynum/>
             <order-fill-traveller />
-            <order-fill-commit-order />
+            <order-fill-commit-order :data="data"/>
         </div>
     </div>
 </template>

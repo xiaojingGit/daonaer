@@ -3,7 +3,7 @@
         <div class="booking-intro">
             <em class="booking-right">产品价格</em>
             <strong class="booking-right booking-price">
-                ￥<em class="price-num">{{$store.state.orderfill.num}}</em>
+                ￥<em class="price-num">{{$store.state.orderfill.num * data.unitPrice}}</em>
             </strong>
         </div>
         <router-link to="/" class="booking-btn">提交订单</router-link>
@@ -11,7 +11,9 @@
 </template>
 
 <script>
-    
+    export default {
+        props: ["data"]
+    }
 </script>
 
 <style scoped>
