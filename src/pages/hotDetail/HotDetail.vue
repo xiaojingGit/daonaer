@@ -5,8 +5,8 @@
         <hot-comment />
         <hot-notice />
         <hot-recommendation />
-        <hot-tickets-list :ticketsList="ticketsList" />
-        <hot-user-comments />
+        <hot-tickets-list :ticketsList = "ticketsList" />
+        <hot-user-comments :commentsImg = "commentsImg"/>
         <hot-other-attractions :otherAttractions = "otherAttractions" />
     </div>
 </template>
@@ -36,13 +36,16 @@ export default {
     },
     computed: mapState ({
         ticketsList: (state) => {
-            return state.hotDetail.todayTickets
+            return state.hotDetail.ticketsList
         },
         otherAttractions: (state) => {
             return state.hotDetail.otherAttractions
         },
         imgList: (state) => {
             return state.hotDetail.imgList
+        },
+        commentsImg: (state) => {
+            return state.hotDetail.commentsImg
         }
     }),
     mounted() {

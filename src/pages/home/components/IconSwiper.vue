@@ -1,7 +1,7 @@
 <template>
   <div class="icon-swiper">
         <swiper :options="swiperOption" ref="mySwiper">
-            <swiper-slide v-for="item in listSwiperData" key="index">
+            <swiper-slide v-for="item in listSwiperData" :key="item.id">
                 <ul class="icon-pag">
                     <li v-for="innerItem in item" :key="innerItem.id" class="icon-list">
                         <router-link :to="innerItem.linkTo">
@@ -44,9 +44,33 @@
           }
       }
 </script>
-
 <style>
+    .icon-swiper-pagination{
+        position: absolute;
+        bottom: 0rem!important;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: #fff;
+    }
+
+    .icon-bullet{
+        display: inline-block;
+        margin: 0 4px;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background: rgba(144,144,144,0.8);
+    }
+
+    .icon-bullet-active{
+        background: rgba(0,175,190,.8);
+    }
+</style>
+
+<style scoped>
     .icon-swiper{
+        position: relative;
         height:3.8rem;
         background-color: #fff;
     }
@@ -58,6 +82,7 @@
         padding: .1rem 0;
         overflow: hidden;
         width: 100%;
+        height: 3.4rem;
         z-index: 2;
     }
 
@@ -95,24 +120,7 @@
 
     }
 
-    .icon-swiper-pagination{
-        width: 100%;
-        text-align: center;
-        background: #fff;
-    }
-
-    .icon-bullet{
-        display: inline-block;
-        margin: 0 4px;
-        width: 6px;
-        height: 6px;
-        border-radius: 3px;
-        background: rgba(144,144,144,0.8);
-    }
-
-    .icon-bullet-active{
-        background: rgba(0,175,190,.8);
-    }
+    
 
 
 </style>

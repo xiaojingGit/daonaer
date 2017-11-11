@@ -5,7 +5,7 @@
             <div class="recommend-list" v-for = "item in otherAttractions" :key = "item.id">
                 <a href="//touch.piao.qunar.com/touch/detail.htm?id=4194325354&amp;cat=from_area%3Dts_hot_recommend%26from_index%3D0%26from_value%3D%25E6%2595%2585%25E5%25AE%25AB%26dist_city%3D%25E5%258C%2597%25E4%25BA%25AC" role="sightLink">
                     <div class="recommend-item">
-                        <img class="recommend-img" :src="item.imgSrc" style="">
+                        <img class="recommend-img" v-lazy="item.imgSrc" style="">
                         <div class="recommend-info border-bottom">
                             <div class="recommend-sight">
                                 {{item.scenicSpot}}
