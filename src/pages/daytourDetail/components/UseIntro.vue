@@ -1,5 +1,5 @@
 <template>
-    <div class="useintro">
+    <div class="useintro" id="useIntroCon">
         <h3 class="useintro-title">使用说明</h3>
         <div class="useintro-con" :style="{height: height}">
             <div class="useintro-item">

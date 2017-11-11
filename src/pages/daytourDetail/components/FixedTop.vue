@@ -1,6 +1,6 @@
 <template>
     <div class="hide-top" v-bind:style="{opacity : opacityValue}" >
-        <router-link to="/" class="goback-link">
+        <router-link to="/list" class="goback-link">
             <span class="iconfont icon-fanhui"></span>
         </router-link>
         <h1 class="main-title">故宫</h1>
@@ -27,12 +27,16 @@
                 this.opacityValue = 1 / 200 * scrollTop;
             },
             onScroll() {
-                window.onscroll = (e) => {
-                    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                window.addEventListener("scroll", this.handleScroll);
+            },
+            handleScroll() {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                     this.opacityValue = 1 / 200 * (scrollTop <= 200 ? scrollTop : 200);
-                }
             }
-        }
+        },
+		destroyed() {
+			window.removeEventListener("scroll", this.handleScroll);
+		}
     }
 </script>
 

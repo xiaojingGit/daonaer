@@ -1,5 +1,5 @@
 <template>
-    <div class="cost-box" ref="costGroup">
+    <div class="cost-box" id="costCon">
         <h3 class="cost-title cost-border">费用及退款说明</h3>
         <div class="cost-con">
             <h4 class="cost-subtitle">费用包含</h4>
